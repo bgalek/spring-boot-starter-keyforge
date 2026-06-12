@@ -3,7 +3,7 @@ plugins {
     `maven-publish`
     signing
     jacoco
-    id("pl.allegro.tech.build.axion-release") version "1.18.8"
+    id("pl.allegro.tech.build.axion-release") version "1.21.2"
     id("com.adarshr.test-logger") version "4.0.0"
     id("net.ltgt.errorprone") version "4.1.0"
     id("io.github.gradle-nexus.publish-plugin") version "2.0.0"
@@ -30,7 +30,7 @@ dependencies {
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor:3.4.3")
     api("org.springframework.boot:spring-boot-starter-oauth2-authorization-server:3.4.3")
     api("org.springframework.boot:spring-boot-starter-web:3.4.3")
-    implementation("com.github.bgalek:keyforge:1.0.1")
+    implementation("com.github.bgalek:keyforge:1.0.2")
     errorprone("com.google.errorprone:error_prone_core:2.35.1")
     testImplementation(platform("org.junit:junit-bom:6.1.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
@@ -102,6 +102,8 @@ nexusPublishing {
         sonatype {
             username.set(System.getenv("SONATYPE_USERNAME"))
             password.set(System.getenv("SONATYPE_PASSWORD"))
+            nexusUrl.set(uri("https://ossrh-staging-api.central.sonatype.com/service/local/"))
+            snapshotRepositoryUrl.set(uri("https://central.sonatype.com/repository/maven-snapshots/"))
         }
     }
 }
