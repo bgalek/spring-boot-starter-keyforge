@@ -32,7 +32,7 @@ dependencies {
     api("org.springframework.boot:spring-boot-starter-web:3.4.3")
     implementation("com.github.bgalek:keyforge:1.0.1")
     errorprone("com.google.errorprone:error_prone_core:2.35.1")
-    testImplementation(platform("org.junit:junit-bom:5.11.2"))
+    testImplementation(platform("org.junit:junit-bom:6.1.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
     testImplementation("org.springframework.boot:spring-boot-starter-test:3.4.3")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
