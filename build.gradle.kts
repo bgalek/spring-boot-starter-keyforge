@@ -31,7 +31,7 @@ dependencies {
     api("org.springframework.boot:spring-boot-starter-oauth2-authorization-server:3.4.3")
     api("org.springframework.boot:spring-boot-starter-web:3.4.3")
     implementation("com.github.bgalek:keyforge:1.0.2")
-    errorprone("com.google.errorprone:error_prone_core:2.35.1")
+    errorprone("com.google.errorprone:error_prone_core:2.50.0")
     testImplementation(platform("org.junit:junit-bom:6.1.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
     testImplementation("org.springframework.boot:spring-boot-starter-test:3.4.3")
